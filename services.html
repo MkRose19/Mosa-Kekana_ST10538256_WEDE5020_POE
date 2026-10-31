@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Programs | Tebogo Theron Foundation</title>
+<title>Tebogo Theron Foundation | Greater Tubatse Limpopo</title>
+<meta name="description" content="Empowering Greater Tubatse with education, food security, volunteer and sponsorship programs in Burgersfort Limpopo.">
+<meta name="keywords" content="Tebogo Theron Foundation, Greater Tubatse, Burgersfort NGO, Limpopo charity, volunteer Tubatse">
+<link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <link rel="stylesheet" href="style.css">
+    
+  <link rel="sitemap" href="sitemap.xml">
+
 </head>
 <body>
     <header>
@@ -19,8 +25,9 @@
     </header>
 
     <main class="container">
-        <h2>Our Programs</h2>
         <div class="programs">
+        <div id="program-list"></div>
+        <input id="searchInput" type="text" placeholder="Search programs..." onkeyup="filterPrograms()">
             <div class="card">
                 <img src="images\photo-1503676260728-1c00da094a0b.jpg" alt="Children learning" width="350">
                 <h3>📚 Education</h3>
@@ -32,7 +39,7 @@
                 <p>Monthly health awareness campaigns and clinic support.</p>
             </div>
             <div class="card">
-                <img src="images\photo-1593113598332-cd288d649433.jpg" alt="Community garden" width="350"
+                <img src="images\photo-1593113598332-cd288d649433.jpg" alt="Community garden" width="350">
                 <h3>🌾 Food Security</h3>
                 <p>Community gardens and food parcels to 50+ families.</p>
             </div>
@@ -43,6 +50,9 @@
             </div>
         </div>
     </main>
-    <footer><p>&copy; 2026 Tebogo Theron Foundation</p></footer>
+    <footer><p>&copy; 2026 Tebogo Theron Foundation</p>
+    </footer>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

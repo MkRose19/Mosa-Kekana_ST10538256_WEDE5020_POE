@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Tebogo Theron Foundation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tebogo Theron Foundation | Greater Tubatse Limpopo</title>
+<meta name="description" content="Empowering Greater Tubatse with education, food security, volunteer and sponsorship programs in Burgersfort Limpopo.">
+<meta name="keywords" content="Tebogo Theron Foundation, Greater Tubatse, Burgersfort NGO, Limpopo charity, volunteer Tubatse">
+<link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <link rel="stylesheet" href="style.css">
+  <link rel="sitemap" href="sitemap.xml">
 </head>
 <body>
     <header>
@@ -37,18 +41,30 @@
 
         <h3>Send us a Message</h3>
         <form class="form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea rows="4" placeholder="Your Message"></textarea>
-            <button type="submit" class="btn">Send</button>
+        <form id="contactForm">
+            <label>Full Name</label>
+            <input type="text" id="Name" required>
+            
+
+            <label>Email</label>
+            <input type="email" name="email" required>
+
+            <label>Message</label>
+            <textarea name="message" id="Message" rows="5" required></textarea>
+
+            <button type="submit" class="btn">Send Message</button>
+            <div id="contactResponse"></div>
+</form>           
         </form>
 
         <h3>Find Us</h3>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115!2d30.05!3d-24.7" width="100%" height="300" style="border:0;"></iframe>
+       <div id="map" style="height:300px;"></div>
     </main>
 
     <footer>
         <p>&copy; 2026 Tebogo Theron Foundation</p>
     </footer>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

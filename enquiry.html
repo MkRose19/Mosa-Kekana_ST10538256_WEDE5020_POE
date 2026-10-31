@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Involved | Tebogo Theron Foundation</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tebogo Theron Foundation | Greater Tubatse Limpopo</title>
+<meta name="description" content="Empowering Greater Tubatse with education, food security, volunteer and sponsorship programs in Burgersfort Limpopo.">
+<meta name="keywords" content="Tebogo Theron Foundation, Greater Tubatse, Burgersfort NGO, Limpopo charity, volunteer Tubatse">
+<link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <link rel="stylesheet" href="style.css">
+    
+  <link rel="sitemap" href="sitemap.xml">
+
 </head>
 <body>
     <header>
@@ -19,36 +25,36 @@
     </header>
 
     <main class="container">
-        <h2>Get Involved</h2>
+    
         <p>Join us as a volunteer, donor, or sponsor. Fill in the form below.</p>
         <img src="images\photo-1552664730-d307ca884978.jpg" width="350">
+       
         <form class="form">
-            <label>Full Name</label>
-            <input type="text" required>
 
-            <label>Email</label>
-            <input type="email" required>
-
-            <label>Phone</label>
-            <input type="tel">
-
-            <label>I would like to:</label>
-            <select>
-                <option>Volunteer</option>
-                <option>Become a Monthly Donor</option>
-                <option>Sponsor a Program</option>
-                <option>General Enquiry</option>
-            </select>
-
-            <label>Message</label>
-            <textarea rows="5"></textarea>
-
-            <button type="submit" class="btn">Submit Enquiry</button>
+<form id="enquiryForm">
+    <input id="ename" type="text" placeholder="Full Name" required>
+    <input id="err-name" type="hidden" value="Please enter your name.">
+    <input id="eemail" type="email" placeholder="Email" required>
+    <input id="err-email" type="hidden" value="Please enter a valid email address.">
+    <input id="ephone" type="tel" placeholder="Phone">
+    <select id="epurpose" required>
+        <option value="">I would like to:</option>
+        <option value="volunteer">Volunteer</option>
+        <option value="donor">Become a Monthly Donor</option>
+        <option value="sponsor">Sponsor a Program</option>
+        <option value="enquiry">General Enquiry</option>
+    </select>
+      <button type="submit" class="btn"><div id="enquiryResponse"></div></form>
+    Submit Enquiry</button>
+        
         </form>
     </main>
 
     <footer>
         <p>&copy; 2026 Tebogo Theron Foundation</p>
     </footer>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/main.js"></script>
+
 </body>
 </html>
