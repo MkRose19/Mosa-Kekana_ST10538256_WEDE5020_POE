@@ -1,13 +1,16 @@
 
 document.addEventListener('DOMContentLoaded', function() {
 
-
 var m = document.getElementById('map');
-if(m && window.L){
+if(m){
+  m.style.height='350px'; // fix access blocked if height 0
   var map = L.map('map').setView([-24.9,30.1],10);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
-  L.marker([-24.9,30.1]).addTo(map).bindPopup('Greater Tubatse');
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{
+    attribution:'© OpenStreetMap'
+  }).addTo(map);
+  L.marker([-24.9,30.1]).addTo(map).bindPopup('Greater Tubatse').openPopup();
 }
+
 
 document.querySelectorAll('img').forEach(function(im){
   im.onclick=function(){ lbImg.src=this.src; lb.style.display='flex'; }
